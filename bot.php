@@ -17,7 +17,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			switch ($text) {
-				case preg_match('/สวัสดี.*/', $text) ? true : false) :
+				case stripos($text,'สวัดดี') !== false :
 					$text = 'สวัสดีครับ มีอะไรให้ช่วย?';
 					break;
 
