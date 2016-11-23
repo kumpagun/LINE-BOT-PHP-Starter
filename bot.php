@@ -16,6 +16,16 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
+			switch ($text) {
+				case 'สวัสดี':
+					$text = 'สวัสดีครับ มีอะไรให้ช่วย?';
+					break;
+
+				default:
+					$text = 'ฮะฮะอะไรนะ';
+					break;
+			}
+
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
